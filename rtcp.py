@@ -7,7 +7,7 @@ from colorama import Style
 colorama_init()
 
 def main():    
-    url = 'http://api.auth.org/index.php'
+    url = '192.168.1.133/index.php'
     print(f"{Fore.CYAN}Connection to: {Fore.GREEN}"+ url)
     print(f"{Fore.WHITE}")
     username = input("Username: ")
