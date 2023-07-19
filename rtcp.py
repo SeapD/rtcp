@@ -1,4 +1,4 @@
-import requests, re, time, getpass, os, random
+import requests, re, time, getpass, random
 
 from colorama import init as colorama_init
 from colorama import Fore
@@ -51,10 +51,6 @@ def main():
                 exit(0)
             else:
                 print ("") 
-            if (quite.find('{cls}') != -1):
-                os.system('cls')
-            else:
-                print ("")
 
             if (quite.find('{exit}') != -1):
                 print(f"{Fore.MAGENTA}Disconnect...")
@@ -71,7 +67,6 @@ if __name__ == "__main__":
     try:
         main()
     except Exception:
-        os.system('cls')
         print(f"{Fore.RED}\t\t\t\t\t\tError to connection!")
         print(f"{Fore.RED}\t\t\t\t\t\tError to connection!")
         print(f"{Fore.RED}\t\t\t\t\t\tError to connection!")
