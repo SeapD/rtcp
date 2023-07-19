@@ -25,7 +25,6 @@ colorama_init()
 
 def main():    
     url = 'http://api.cryptofinder.org/list.php'
-    #print('Connection to: ' + url)
     print(f"{Fore.CYAN}[STATUS]Connection to: {Fore.GREEN}"+ url)
     print(f"{Fore.WHITE}[AUTH] Username: {Fore.GREEN}khamba")
     print('')
@@ -46,9 +45,6 @@ def main():
             i+=1
             balance = random.random()
             SecStatus = random.randint(0, 1)
-            #print(f"{Fore.WHITE}"+ f'[!] BTC {i} | {mainGen()} | Balance: {balance} | W: 0 | Secret: {SecStatus}')
-            #print(f"{Fore.CYAN}")
-            #print(f"{Fore.RED}")
             time.sleep(1)
             if( balance <= 0.0000001 ):
                 print(f"{Fore.GREEN}"+ f'[-] {i} | {mainGen()} | {GetBbtc()} | W: 0 | Secret: {SecStatus} | Balance: {balance} ')
@@ -64,12 +60,11 @@ def main():
             else:
                 print(f"{Fore.RED}"+ f'[-] {i} | {mainGen()} | {GetBbtc()} | W: 0 | Secret: {SecStatus} | Balance: {balance} ')
                 bad += 1
-                
+             
             mtitl = str(f'BitocMasterINI - Round: {i} - Good: {good} - Section: {section} - Bad: {bad}')
-            system('title '+ mtitl)
+            print(mtitl)
     else:
         print(authorization)
-        #time.sleep(5)
         del authorization
         main()
 
